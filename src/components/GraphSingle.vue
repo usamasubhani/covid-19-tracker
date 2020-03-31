@@ -1,8 +1,6 @@
 <template>
   <div class="small">
-    <line-chart
-      :chartdata="chartData"
-      />
+    <line-chart :chart-data="datacollection"></line-chart>
   </div>
 </template>
 
@@ -14,13 +12,12 @@
     components: {
       LineChart
     },
-    props: ['data'],
-    // data () {
-    //   return {
-    //     loaded: false,
-    //     chartdata: null
-    //   }
-    // },
+    props: ['data','type'],
+    data () {
+      return {
+        datacollection: {}
+      }
+    },
     computed: {
         chartData: function() {
         console.log(this.data)
@@ -28,47 +25,50 @@
         }
     },
     mounted () {
-      this.datacollection = {
-          labels: Object.keys(this.data.result),
-          datasets: [
-            {
-              label: "Cases",
-              backgroundColor: '#f87979',
-              data: this.chartData
-            }
-          ]
-        }
+      this.fillData()
     },
     methods: {
       fillData () {
-          console.log(this.data.result)
         this.datacollection = {
           labels: Object.keys(this.data.result),
           datasets: [
             {
-              label: "Cases",
-              backgroundColor: '#f87979',
-              data: this.computeData()
+              label: this.type[0].toUpperCase() + this.type.slice(1),
+              // backgroundColor: '#f87979', //TODO: Add gradient in background
+              backgroundColor: 'rgba(253, 1, 1, 0.2)',
+              borderColor: 'rgba(253, 1, 1, 0.2)', 
+              // pointBackgroundColor: 'red', 
+              borderWidth: 1, 
+              pointBorderColor: 'rgba(253, 1, 1, 0.5)',
+              data: this.computeData(),
             }
           ]
         }
-        this.loaded = true
       },
       computeData () {
         var tempArray = []
         for (let [key, value] of Object.entries(this.data.result)) {
             console.log(key)
+            if (this.type == 'cases'){
             tempArray.push(value.confirmed)
+            } else if (this.type == 'deaths'){
+              tempArray.push(value.deaths)
+            }
         }
         return tempArray
       }
+    },
+    watch: {
+    data: function() {
+      this.fillData()
     }
+  }
   }
 </script>
 
 <style>
   .small {
     max-width: 600px;
-    margin:  150px auto;
+    margin:  50px auto;
   }
 </style>

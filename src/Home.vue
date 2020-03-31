@@ -2,8 +2,8 @@
 <div>
     <Numbers :data="numbers" />
     <b-row>
-        <b-col><Chart :data="dataGlobalChart"/></b-col>
-        <!-- <b-col><Chart/></b-col> -->
+        <b-col><Chart :data="globalData" :type="'cases'"/></b-col>
+        <b-col><Chart :data="globalData" :type="'deaths'"/></b-col>
     </b-row>
     <Table :globalData="globalData"/>
     
@@ -55,7 +55,7 @@ export default {
             console.log(key)
             tempArray.push(value.confirmed)
         }
-        console.log(tempArray)
+        // console.log(tempArray)
         return tempArray
     }
   }

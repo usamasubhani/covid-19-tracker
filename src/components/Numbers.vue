@@ -1,9 +1,9 @@
 <template>
     <b-container class="bv-example-row">
         <b-row v-if="data != null">
-            <b-col><h2>{{ data.cases }}</h2>Cases </b-col>
-            <b-col><h2>{{ data.deaths }}</h2>Deaths </b-col>
-            <b-col><h2>{{ data.recovered }}</h2>Recovered </b-col>
+            <b-col><h1>{{ data.cases || data.confirmed }}</h1>Cases </b-col>
+            <b-col><h1>{{ data.deaths }}</h1>Deaths </b-col>
+            <b-col><h1>{{ data.recovered }}</h1>Recovered </b-col>
         </b-row>
     </b-container>
 </template>
@@ -15,3 +15,11 @@ export default {
   props: ["data"]
 }
 </script>
+
+
+<style>
+  .bv-example-row {
+    /* max-width: 600px; */
+    margin-top:  70px;
+  }
+</style>

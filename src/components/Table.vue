@@ -1,6 +1,6 @@
 <template>
 <div class="section">
-    <table class="table table-dark striped hover" v-if="globalData != null">
+    <table class="table table-dark hover" v-if="globalData != null">
         <thead>
             <th>Date</th>
             <th>Cases</th>
@@ -8,7 +8,7 @@
             <th>Recovered</th>
         </thead>
         <tbody>
-            <tr v-for="(row, name) in globalData.result" :key="name">
+            <tr v-for="(row, name) in globalData.result" :key="row">
                 <td>{{ name }}</td>
                 <td v-for="cols in row" :key="cols">{{ cols }}</td>
             </tr>
@@ -20,6 +20,16 @@
 <script>
 export default {
   name: 'Table',
-  props: ["globalData"]
+  props: ["globalData"],
+  mounted() {
+      this.globalData.slice().reverse()
+  }
 }
 </script>
+
+<style>
+  .section {
+    max-width: 800px;
+    margin:  150px auto;
+  }
+</style>
