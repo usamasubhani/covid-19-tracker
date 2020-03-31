@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navigation/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import HelloWorld from './components/HelloWorld.vue'
+import Navigation from './components/Navigation.vue'
+// import Numbers from './components/Numbers.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navigation,
+    // Numbers
   }
 }
 </script>
