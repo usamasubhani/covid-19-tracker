@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: './covid-19-tracker/',
+  publicPath: './',
   outputDir: 'docs'
 }
