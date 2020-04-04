@@ -13,9 +13,7 @@
   </b-navbar> -->
   <div>
   <b-navbar toggleable="lg" type="dark" variant="dark">
-    <b-navbar-brand href="#">
-      <img src="/assets/covid.png" alt="">
-    </b-navbar-brand>
+    <b-navbar-brand href="#">Coronavirus Tracker</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -23,6 +21,11 @@
       <b-navbar-nav>
         <b-nav-item to="/">Global</b-nav-item>
         <b-nav-item to="/country">Country</b-nav-item>
+      </b-navbar-nav>
+
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item href="https://github.com/usamasubhani/covid-19-tracker">Source Code</b-nav-item>
+        <b-nav-item href="https://www.youtube.com/watch?v=xVEfZbS70Mw">Build Timelapse</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
