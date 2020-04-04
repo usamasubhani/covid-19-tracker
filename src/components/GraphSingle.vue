@@ -35,9 +35,9 @@
             {
               label: this.type[0].toUpperCase() + this.type.slice(1),
               // backgroundColor: '#f87979', //TODO: Add gradient in background
-              backgroundColor: 'rgba(253, 1, 1, 0.2)',
-              borderColor: 'rgba(253, 1, 1, 0.2)', 
-              // pointBackgroundColor: 'red', 
+              backgroundColor: 'rgba(253, 1, 1, 0.3)',
+              borderColor: 'rgba(253, 1, 1, 0.3)', 
+              // pointBackgroundColor: 'blue', 
               borderWidth: 1, 
               pointBorderColor: 'rgba(253, 1, 1, 0.5)',
               data: this.computeData(),
