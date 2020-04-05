@@ -27,5 +27,6 @@ export default {
   color: white;
   /* margin-top: 60px; */
   background-color: #343a40;
+  overflow: hidden;
 }
 </style>
