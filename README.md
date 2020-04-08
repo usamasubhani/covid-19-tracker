@@ -1,24 +1,9 @@
-# covidviz
+# Covid-19 Tracker
 
-## Project setup
-```
-npm install
-```
+## APIs used
+- https://github.com/NovelCOVID/API
+- https://github.com/backtrackbaba/covid-api
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Libraries
+- VueJS
+- vue-chartjs
