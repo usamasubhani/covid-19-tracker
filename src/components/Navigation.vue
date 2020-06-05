@@ -12,7 +12,7 @@
     </b-collapse>
   </b-navbar> -->
   <div>
-  <b-navbar toggleable="lg" type="dark" variant="dark">
+  <b-navbar class="nav" toggleable="lg" type="dark" variant="dark">
     <b-navbar-brand href="#">Coronavirus Tracker</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style>
-
+.nav{
+  background-color: #111111 !important
+}
 </style>

@@ -19,10 +19,9 @@
       }
     },
     computed: {
-        chartData: function() {
-        console.log(this.data)
-        return this.data;
-        }
+      chartData: function() {
+      return this.data;
+      }
     },
     mounted () {
       this.fillData()
@@ -36,7 +35,8 @@
               label: this.type[0].toUpperCase() + this.type.slice(1),
               // backgroundColor: '#f87979', //TODO: Add gradient in background
               backgroundColor: 'rgba(253, 1, 1, 0.3)',
-              borderColor: 'rgba(253, 1, 1, 0.3)', 
+              fontColor: 'red',
+              // borderColor: 'rgba(253, 1, 1, 0.3)', 
               // pointBackgroundColor: 'blue', 
               borderWidth: 1, 
               pointBorderColor: 'rgba(253, 1, 1, 0.5)',
@@ -70,5 +70,6 @@
   .small {
     max-width: 600px;
     margin:  50px auto;
+    color: white;
   }
 </style>

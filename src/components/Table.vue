@@ -10,7 +10,7 @@
         <tbody>
             <tr v-for="(row, name) in globalData.result" :key="row">
                 <td>{{ name }}</td>
-                <td v-for="cols in row" :key="cols">{{ cols }}</td>
+                <td v-for="cols in row" :key="cols">{{ cols.toLocaleString('en') }}</td>
             </tr>
         </tbody>
     </table>
@@ -31,5 +31,8 @@ export default {
   .section {
     max-width: 800px;
     margin:  150px auto;
+  }
+  .table-dark{
+    background-color: #111111;
   }
 </style>
